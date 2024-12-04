@@ -14,7 +14,7 @@ Deflated and Base64 encoded:
 https://lua-api.factorio.com/latest/classes/LuaHelpers.html#encode_string
 
 
-Test string: `eNqtUDFuBDEI/BAUkZIyTfoUeQL2Eh86bCxgT3l+nKxOOW0dikEzCMHM+/MLfrw9vUYyK9YLRwJEmlNjTBpXAP6azhGYTiOmeWJhzT99Hxt7c1v9NImpkskO8EmRKCPYf6naaHihtbg9qGXX6wONTqrIyjVdKk5TBui8yd7PapF2lmIvkZRiA2DK5AMxDY9XAZxED8SQNmgRqik3xul2k2XqnodbsR/j95+U+gSoNtaFkVitFxm0QoN/r2/5HYo6`
+Test string: `eNqtULFuQzEI/CEzVGrHLt079BOwH3VQMFjAi/r5ddIoUTKX4dAdAt3x+foGXx8v75FEAu1AkSXSHDtBoh4L/UynCEhHjWmeUEnyJu+6kXe31R8HMYUzycs3RgJrkJ+ZmHY44Nra7mLd5XhnMVAESKilc4NpQmXQxvt4Eiv3JyX2GonJpmXypAtAGvwZLI4sF4DgrigFW/KJYLqdeOW45nerdk56dSI4Zmmm67ImNBuVFdeLyn/XL5Vihso=`
 
 Visual:
 
