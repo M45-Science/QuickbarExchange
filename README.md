@@ -6,9 +6,6 @@ Data: `slot-name`
 
 Delimiter: `,`
 
-Number of items: `100`
-
-
 Deflated and Base64 encoded:
 
 https://lua-api.factorio.com/latest/classes/LuaHelpers.html#encode_string
