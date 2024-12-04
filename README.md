@@ -19,3 +19,6 @@ Test string: `eNqtUDFuBDEI/BAUkZIyTfoUeQL2Eh86bCxgT3l+nKxOOW0dikEzCMHM+/MLfrw9vU
 Visual:
 
 ![Test Quickbar](https://raw.githubusercontent.com/M45-Science/M45-Quickbar-Exchange/refs/heads/main/example-bar.png)
+
+
+Example code: https://github.com/M45-Science/SoftMod/blob/Main/quickbar.lua
