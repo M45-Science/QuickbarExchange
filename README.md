@@ -30,7 +30,7 @@ Inventory quality is shortened using single-character codes:
 | `l`   | legendary   |
 
 Items with **normal** quality leave out this suffix.
-Forward compatable: quality strings not in the table will simply pass-through unaltered.
+### Forward compatable: quality strings not in the table will simply pass-through unaltered.
 
 ---
 
@@ -40,6 +40,7 @@ Forward compatable: quality strings not in the table will simply pass-through un
 
 - Quality is appended when != normal.
 - Padding with commas extends up to 100 slots, to retain the quickbar position.
+### Forward compatable: item strings not in the table will simply pass-through unaltered.
 
 ---
 
