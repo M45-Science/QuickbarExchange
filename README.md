@@ -30,7 +30,7 @@ Inventory quality is shortened using single-character codes:
 | `l`   | legendary   |
 
 Items with **normal** quality leave out this suffix.
-### Forward compatable: quality strings not in the table will simply pass-through unaltered.
+### Forward + mod compatable: quality strings not in the table will simply pass-through unaltered.
 
 ---
 
