@@ -10,9 +10,9 @@ Share your custom quickbar setups using compressed, Base64-encoded strings.
 - The header `M45-QB2=` identifies the format version.
 - Each quickbar slot is encoded as:
   ```
-  slot-alias[:quality-alias]
+  slot-alias[:quality-alias],
   ```
-- Up to **100 slots** are included. Empty slots appear as empty commas (`,,`).
+- Up to **100 slots** are included, empty items still add a comma for absolute-positioning.
 
 ---
 
@@ -20,6 +20,8 @@ Share your custom quickbar setups using compressed, Base64-encoded strings.
 
 Instead of lengthy item names, slot aliases (e.g. `AA`, `AB`, `AC`, ...) are auto-generated using the included item list. They map to in-game prototypes via lookup tables. Forward compatable: item strings not in the table will simply pass-through unaltered.
 
+Example string `eNqtwbENgDAMRcGFHg2CkiI/CZFjI0CiIfsPwhLcHcs63Zq3ENEpg5ooL1W0CzleaQ9KRGDCMjbomST6ie9k428fo+EebA==`
+20 items in 97 bytes, or about 4.75 bytes per item once fully encoded.
 
 ---
 
@@ -64,21 +66,6 @@ This string represents:
 - `AD` – fourth, normal  
 - `AE:r` – fifth, rare  
 - Remaining slots are empty.
-
----
-
-## In-Game Usage
-
-### Export Quickbar
-```lua
-QUICKBAR_MakeExchangeWindow(player, true)
-```
-- Opens a window with the encoded string for copying.
-
-### Import Quickbar
-- Paste an encoded string into the window and click **Import**.
-- The mod parses, decodes, and populates your quickbar up to 100 slots.
-- Skips invalid items/qualities and notifies you of any issues.
 
 ---
 
