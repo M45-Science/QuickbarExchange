@@ -14,6 +14,7 @@
 ![Example Quickbar GUI](https://raw.githubusercontent.com/M45-Science/M45-Quickbar-Exchange/refs/heads/main/example-bar.png)
 
 You can find the reference `quickbar.lua` implementation [here](https://github.com/M45-Science/SoftMod/blob/Main/quickbar.lua).
+V2 can read V1 strings with no extra code.
 
 ---
 
