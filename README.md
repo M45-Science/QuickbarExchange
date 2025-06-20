@@ -1,25 +1,5 @@
 # M45 Quickbar Exchange (Format V2)
 
-Share your custom quickbar setups using compressed, Base64-encoded strings.
-
----
-
-## 🚀 How It Works
-
-- Code embeds support for M45 Quickbar Exchange **V2** using string compression via `zlib` and Base64 encoding through `LuaHelpers.encode_string`.
-- The header `M45-QB2=` identifies the format version.
-- Each quickbar slot is encoded as:
-  ```
-  slot-alias[:quality-alias],
-  ```
-- Up to **100 slots** are included, empty items still add a comma for absolute-positioning.
-
----
-
-## Slot Aliases
-
-Instead of lengthy item names, slot aliases (e.g. `AA`, `AB`, `AC`, ...) are auto-generated using the included item list. They map to in-game prototypes via lookup tables. Forward compatable: item strings not in the table will simply pass-through unaltered.
-
 ## Example
 V2 example string:
 
@@ -33,6 +13,10 @@ V1 example string:
 `eNqtULFuQzEI/CEzVGrHLt079BOwH3VQMFjAi/r5ddIoUTKX4dAdAt3x+foGXx8v75FEAu1AkSXSHDtBoh4L/UynCEhHjWmeUEnyJu+6kXe31R8HMYUzycs3RgJrkJ+ZmHY44Nra7mLd5XhnMVAESKilc4NpQmXQxvt4Eiv3JyX2GonJpmXypAtAGvwZLI4sF4DgrigFW/KJYLqdeOW45nerdk56dSI4Zmmm67ImNBuVFdeLyn/XL5Vihso=`
 
 253 bytes for 20 items or about 12.6 bytes per item.
+
+![Example Quickbar GUI](https://raw.githubusercontent.com/M45-Science/M45-Quickbar-Exchange/refs/heads/main/example-bar.png)
+
+You can find the reference `quickbar.lua` implementation [here](https://github.com/M45-Science/SoftMod/blob/Main/quickbar.lua).
 
 ---
 
@@ -55,20 +39,12 @@ Forward compatable: quality strings not in the table will simply pass-through un
 ## Format Summary
 
 ```
-M45-QB2=alias[:quality],alias[:quality],...,alias[:quality]
-```
+M45-QB2=name/alias[:quality/alias],name/alias[:quality/alias],...```
 
-- Slot alias must map to a valid item in the mod’s list.
 - Quality is appended when != normal.
-- Padding with commas extends up to 100 slots.
+- Padding with commas extends up to 100 slots, to retain the quickbar position.
 
 ---
-
-## Example
-
-```
-M45-QB2=AA,AB:l,AC:u,AD,AE:r,,,,,... (total 100 entries)
-```
 
 This string represents:
 - `AA` – first item, normal quality  
@@ -79,29 +55,6 @@ This string represents:
 - Remaining slots are empty.
 
 ---
-
-## Quick Start
-
-1. Copy `quickbar.lua` into your `control.lua` or equivalent.
-2. Ensure its required helper functions and `prototypes` tables are available.
-3. Use the export/import UI buttons to exchange your setup.
-
----
-
-## Notes
-
-- Version **MPL 2.0**, authored by Carl Frank Otto III (`carlotto81@gmail.com`).
-- Slot alias generation is dynamic and based on an internal item list—ensure your mod uses the same version for compatibility.
-- This format supersedes **V1**, offering improved flexibility with quality support and built-in aliasing.
-
----
-
-## Visual Example
-
-![Example Quickbar GUI](https://raw.githubusercontent.com/M45-Science/M45-Quickbar-Exchange/refs/heads/main/example-bar.png)
-
-You can find the reference `quickbar.lua` implementation [here](https://github.com/M45-Science/SoftMod/blob/Main/quickbar.lua).
-
 
 # Item list:
 
