@@ -1,23 +1,32 @@
-# M45 Quickbar Exchange Format V1
+# M45 Quickbar Exchange Format V2
 
-Header/Version: `M45-QB1=`
+The quickbar exchange string allows players to share their quickbar setup. The data is compressed using `zlib` and Base64 encoded via [LuaHelpers.encode_string](https://lua-api.factorio.com/latest/classes/LuaHelpers.html#encode_string).
 
-Data: `slot-name`
+## Format
 
-Delimiter: `,`
+```
+M45-QB2=slot-name[:quality],slot-name[:quality],...
+```
 
-Deflated and Base64 encoded:
+- `slot-name` is the item prototype name for each quickbar slot.
+- `quality` is optional and shortened using the following aliases:
+  - `u` – `uncommon`
+  - `r` – `rare`
+  - `e` – `epic`
+  - `l` – `legendary`
 
-https://lua-api.factorio.com/latest/classes/LuaHelpers.html#encode_string
+Qualities are omitted for normal items. Up to 100 slots are encoded with empty entries represented by consecutive commas.
 
+## Example
 
-Test string: `eNqtULFuQzEI/CEzVGrHLt079BOwH3VQMFjAi/r5ddIoUTKX4dAdAt3x+foGXx8v75FEAu1AkSXSHDtBoh4L/UynCEhHjWmeUEnyJu+6kXe31R8HMYUzycs3RgJrkJ+ZmHY44Nra7mLd5XhnMVAESKilc4NpQmXQxvt4Eiv3JyX2GonJpmXypAtAGvwZLI4sF4DgrigFW/KJYLqdeOW45nerdk56dSI4Zmmm67ImNBuVFdeLyn/XL5Vihso=`
+```
+eJytULFuQzEI/CGzVO0SqUv3Dv0E7EcdFAwW8KJ+fp2katTMZTh0h0DcvT+/wMfb02skkUA7UuRBSqQ5doJEPR280Nd0ioB01JjmCZUkf+VdN/LutvrfQUzhTPLyiZHAGuQXJqYdjri2trtYdzndWQwUARJq6dxgmlAZtPE+HsTK/UGJvUZismmZPOkKkAa3B4sjyxUguCtKwZZ8JphuZ14+bhkUt2oXpz+fCI5Zmum6rAnNRmXFFVL55/oGHhWH8Q==
+```
 
-253 bytes for 20 items.
+This 260‑byte string encodes 20 items, including `steel-chest:l` and `storage-tank:r`, followed by 80 empty slots.
 
 Visual:
 
 ![Test Quickbar](https://raw.githubusercontent.com/M45-Science/M45-Quickbar-Exchange/refs/heads/main/example-bar.png)
 
-
-Example code: https://github.com/M45-Science/SoftMod/blob/Main/quickbar.lua
+Example implementation: [quickbar.lua](../quickbar.lua)
