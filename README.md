@@ -1,15 +1,12 @@
 # M45 Quickbar Exchange (Format V2)
 
 ## Example
-V2 example string:
-
+### V2 example string:
 `eNqtwbENgDAMRcGFHg2CkiI/CZFjI0CiIfsPwhLcHcs63Zq3ENEpg5ooL1W0CzleaQ9KRGDCMjbomST6ie9k428fo+EebA==`
 
 97 bytes for 20 items, or about 4.75 bytes per item once fully encoded.
-This is much more size-efficient than v1.
 
-V1 example string:
-
+### V1 example string:
 `eNqtULFuQzEI/CEzVGrHLt079BOwH3VQMFjAi/r5ddIoUTKX4dAdAt3x+foGXx8v75FEAu1AkSXSHDtBoh4L/UynCEhHjWmeUEnyJu+6kXe31R8HMYUzycs3RgJrkJ+ZmHY44Nra7mLd5XhnMVAESKilc4NpQmXQxvt4Eiv3JyX2GonJpmXypAtAGvwZLI4sF4DgrigFW/KJYLqdeOW45nerdk56dSI4Zmmm67ImNBuVFdeLyn/XL5Vihso=`
 
 253 bytes for 20 items or about 12.6 bytes per item.
@@ -38,8 +35,7 @@ Forward compatable: quality strings not in the table will simply pass-through un
 
 ## Format Summary
 
-```
-M45-QB2=name/alias[:quality/alias],name/alias[:quality/alias],...```
+`M45-QB2=name/alias[:quality/alias],name/alias[:quality/alias],...`
 
 - Quality is appended when != normal.
 - Padding with commas extends up to 100 slots, to retain the quickbar position.
