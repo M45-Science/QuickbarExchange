@@ -40,7 +40,7 @@ Items with **normal** quality leave out this suffix.
 
 - Quality is appended when != normal.
 - Padding with commas extends up to 100 slots, to retain the quickbar position.
-### Forward compatable: item strings not in the table will simply pass-through unaltered.
+### Forward + mod compatable: item strings not in the table will simply pass-through unaltered.
 
 ---
 
