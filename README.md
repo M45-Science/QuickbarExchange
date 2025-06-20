@@ -100,4 +100,4 @@ QUICKBAR_MakeExchangeWindow(player, true)
 
 ![Example Quickbar GUI](https://raw.githubusercontent.com/M45-Science/M45-Quickbar-Exchange/refs/heads/main/example-bar.png)
 
-You can find the reference `quickbar.lua` implementation [here](../quickbar.lua).
+You can find the reference `quickbar.lua` implementation [here](https://github.com/M45-Science/SoftMod/blob/Main/quickbar.lua).
