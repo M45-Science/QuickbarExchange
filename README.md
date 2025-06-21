@@ -44,7 +44,7 @@ Items with **normal** quality leave out this suffix.
 
 ---
 
-This string represents:
+Item aliases are Base-26 encoded:
 - `AA` – first item, normal quality  
 - `AB:l` – second item, legendary  
 - `AC:u` – third item, uncommon  
